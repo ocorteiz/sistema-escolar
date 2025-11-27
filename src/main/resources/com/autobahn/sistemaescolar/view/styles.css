@@ -1,0 +1,73 @@
+/* Estilo geral da aplicação */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: #F4F7FA; /* Um cinza bem claro para o fundo */
+}
+
+/* Estilo do Menu Lateral (VBox) */
+.menu-lateral {
+    -fx-background-color: #34495E; /* Azul escuro/ardósia */
+    -fx-padding: 10;
+    -fx-spacing: 15; /* Espaço entre os botões */
+    -fx-pref-width: 300px;
+}
+
+/* Estilo dos Botões do Menu */
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ECF0F1; /* Texto branco/cinza claro */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 280px; /* Largura total dentro do VBox */
+    -fx-padding: 10 15;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-radius: 5;
+    -fx-cursor: hand; /* Mãozinha ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse (hover) */
+.menu-button:hover {
+    -fx-background-color: #4A6572; /* Um pouco mais claro */
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Estilo do Botão "Ativo" */
+.menu-button:focused {
+    -fx-background-color: #2C3E50; /* Mais escuro, indicando seleção */
+    -fx-border-width: 0 0 0 4; /* Borda esquerda */
+    -fx-border-color: #1ABC9C; /* Verde-água */
+}
+
+/* Títulos nas telas internas */
+.titulo-pagina {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+/* Estilos para TableView (solicitado) */
+.table-view {
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #ECF0F1;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.table-view .cell {
+    -fx-font-size: 13px;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1 0; /* Linha apenas embaixo */
+}
+
+/* Estilos para ComboBox (solicitado) */
+.combo-box {
+    -fx-font-size: 13px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #BDC3C7;
+    -fx-border-radius: 3;
+}

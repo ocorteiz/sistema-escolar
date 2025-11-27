@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Priority?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.autobahn.sistemaescolar.controller.ProfessorController">
+    <children>
+        <VBox layoutX="30.0" layoutY="30.0" prefWidth="1020.0" spacing="20.0"
+              AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0"
+              AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+
+            <children>
+                <Label styleClass="titulo-pagina" text="Gestão de Professores" />
+
+                <VBox spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #E0E0E0;">
+                    <children>
+                        <Label text="Cadastrar/Editar Professor(a)">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="BOTTOM_LEFT" spacing="15.0">
+                            <children>
+                                <VBox>
+                                    <children>
+                                        <Label text="Nome do(a) Professor(a)" />
+                                        <TextField fx:id="txtNome" prefWidth="300.0" promptText="Ex: João Silva" />
+                                    </children>
+                                </VBox>
+                                <VBox>
+                                    <children>
+                                        <Label text="Disciplina" />
+                                        <TextField fx:id="txtDisciplina" prefWidth="200.0" promptText="Ex: Matemática" />
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#handleCadastrar"
+                                        style="-fx-background-color: #1ABC9C; -fx-text-fill: white; -fx-font-weight: bold;"
+                                        text="Cadastrar" />
+                                <Button fx:id="btnCancelar" mnemonicParsing="false"
+                                        onAction="#handleCancelar"
+                                        style="-fx-background-color: #BDC3C7; -fx-text-fill: white;"
+                                        text="Cancelar" visible="false" />
+                            </children>
+                        </HBox>
+                        <Label fx:id="lblStatus" textFill="#e74c3c" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label text="Professores Cadastrados">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <HBox HBox.hgrow="ALWAYS" /> <Button fx:id="btnDeletarProfessor" mnemonicParsing="false"
+                                                                     onAction="#handleDeletarProfessor"
+                                                                     style="-fx-background-color: #E74C3C; -fx-text-fill: white;"
+                                                                     text="Deletar Professor" />
+                            </children>
+                        </HBox>
+
+                        <TableView fx:id="tabelaProfessores" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colNome" prefWidth="600.0" text="Nome" />
+                                <TableColumn fx:id="colDisciplina" prefWidth="400.0" text="Disciplina" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
